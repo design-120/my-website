@@ -214,5 +214,6 @@ footer {
   }
 
   .global-nav > li.active .dropdown {
-    display: b
+    display: block;
   }
+}
