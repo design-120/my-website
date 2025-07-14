@@ -37,6 +37,22 @@ header .logo {
   font-weight: bold;
 }
 
+/* ハンバーガーメニュー */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  transition: 0.3s;
+}
+
+/* グローバルメニュー */
 .global-nav {
   list-style: none;
   display: flex;
@@ -155,3 +171,48 @@ footer {
   margin-top: 40px;
   font-size: 14px;
 }
+
+/* スマホ用 */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #003366;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  nav.active {
+    max-height: 500px;
+  }
+
+  .global-nav {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .global-nav > li > a {
+    padding: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .dropdown {
+    position: static;
+    background: #004488;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    display: none;
+  }
+
+  .global-nav > li.active .dropdown {
+    display: b
+  }
