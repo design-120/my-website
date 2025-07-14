@@ -79,11 +79,15 @@ header .logo {
   top: 100%;
   left: 0;
   background: #0055aa;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
   min-width: 160px;
   border-radius: 4px;
   overflow: hidden;
   z-index: 10;
+  pointer-events: none;
 }
 
 .dropdown li a {
@@ -98,7 +102,10 @@ header .logo {
 }
 
 .global-nav > li:hover .dropdown {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .hero {
