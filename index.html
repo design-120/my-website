@@ -4,17 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>サンプル株式会社</title>
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <div class="container">
       <h1 class="logo">サンプル株式会社</h1>
       <nav>
-        <ul>
-          <li><a href="#">ホーム</a></li>
-          <li><a href="#">会社案内</a></li>
-          <li><a href="#">サービス</a></li>
+        <ul class="global-nav">
+          <li>
+            <a href="#">ホーム</a>
+          </li>
+          <li>
+            <a href="#">会社案内</a>
+            <ul class="dropdown">
+              <li><a href="#">会社概要</a></li>
+              <li><a href="#">沿革</a></li>
+              <li><a href="#">アクセス</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">サービス</a>
+            <ul class="dropdown">
+              <li><a href="#">サービスA</a></li>
+              <li><a href="#">サービスB</a></li>
+            </ul>
+          </li>
           <li><a href="#">お問い合わせ</a></li>
         </ul>
       </nav>
@@ -46,11 +61,3 @@
       </div>
     </section>
   </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 サンプル株式会社. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
-</html>

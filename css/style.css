@@ -37,18 +37,68 @@ header .logo {
   font-weight: bold;
 }
 
-header nav ul {
+.global-nav {
   list-style: none;
   display: flex;
+  gap: 30px;
+  position: relative;
 }
 
-header nav li {
-  margin-left: 20px;
+.global-nav > li {
+  position: relative;
 }
 
-header nav a {
+.global-nav > li > a {
   color: #fff;
-  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 0;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.global-nav > li > a:hover {
+  color: #ffcc00;
+}
+
+.global-nav > li > a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #fff;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.global-nav > li > a:hover::after {
+  width: 100%;
+}
+
+.dropdown {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #0055aa;
+  display: none;
+  min-width: 160px;
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.dropdown li a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+.dropdown li a:hover {
+  background: #003366;
+}
+
+.global-nav > li:hover .dropdown {
+  display: block;
 }
 
 .hero {
@@ -77,7 +127,8 @@ section {
   margin: 0 auto;
 }
 
-.about, .news {
+.about,
+.news {
   background: #fff;
   margin-bottom: 20px;
   padding: 20px;
