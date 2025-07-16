@@ -18,3 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+  document.getElementById("myBtn").addEventListener("click", () => {
+    document.getElementById("message").textContent = "押されたよ！";
+});
