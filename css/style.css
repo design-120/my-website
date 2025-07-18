@@ -236,6 +236,18 @@ footer {
   margin-bottom: 15px;
 }
 
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .hero {
   background-color: #0066cc;
   color: white;
@@ -307,7 +319,7 @@ footer {
   .global-nav > li.active .dropdown {
     display: block;
   }
-  
+
   .menu {
     flex-direction: column;
     gap: 10px;
