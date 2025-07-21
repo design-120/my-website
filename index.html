@@ -158,10 +158,11 @@
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    effect: 'fade',
-     fadeEffect: {
-     crossFade: true
-}
+    autoplay: {
+  delay: 5000, // 5秒ごとに切り替え
+  disableOnInteraction: false
+},
+speed: 800 // スライドのアニメーション時間（ms）
   });
 </script>
 
